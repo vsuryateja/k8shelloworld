@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hello-world-deploy
 spec:
-  replicas: 5
+  replicas: 2
   minReadySeconds: 30
   strategy:
     type: RollingUpdate
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: vsuryateja/hello-world:1-0-0-SNAPSHOT
+        image: vsuryateja/openmrs:2.1.3
         ports:
         - containerPort: 8080
 
